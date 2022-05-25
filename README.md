@@ -77,11 +77,14 @@ The main idea of double bollinger band is similar to simply using bollinger band
 ```
 
 i. First of all, if the investor is not holding any asset, then the script will check if the lowest price of that day cross below the bottom of the bollinger band. If yes, the status `self.bottom` is set to `hit`. 
+
 ii. After hitting the band's bottom, when the lowest price of any one following days bounce back above the bottom, the status is changed to `released`. 
+
 iii. If the `released` status remains for 5 days, the status will be reset. However, if the lowest price of that day drops again below the band's bottom, a buy signal will be genereated.
+
 iv. Similarly, the investor will sell out the asset when the highest price of any 2 trading days cross above the band's top. 
 
-The exact logic can be exemplied in the following plot:
+The exact logic can be exemplified in the following plot:
 
 <img src="https://github.com/phynance/Double_Bollinger_Band_with_Backtest/blob/26b3451db567d883bfae2c3e7ee971bb86077d2c/DoubleBB_backtest1.png">
 
@@ -92,9 +95,9 @@ The exact logic can be exemplied in the following plot:
 
 
 ## Follow-up:
-In the study above, we can see that simply using double bollinger band will generate a quite unsatisfactory result. However, this whole projects builds up the skeleton for further ideas. 
+In the study above, we can see that simply using double bollinger band will generate a quite unsatisfactory result. However, this whole projects builds up the skeleton for further ideas implementation. 
 
-1. For example, users may change the selling signal when crossing the middle of band instead of the top of the band. 
+1. For example, users may change the selling signal setup when crossing the middle of band instead of the top of the band. 
 2. The valid period `self.buyreleasedDate+5` is set to 5 days in the example above. This may be trained further by Machine learning. 
 3. This can be combineed with momemtum trading strategy or other indicators such as SMA, golden cross.
 4. The script will be further extended to paper trading on Binance

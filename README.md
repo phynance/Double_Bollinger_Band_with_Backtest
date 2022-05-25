@@ -86,7 +86,8 @@ The exact logic can be exemplied in the following plot:
 <img src="https://github.com/phynance/Double_Bollinger_Band_with_Backtest/blob/26b3451db567d883bfae2c3e7ee971bb86077d2c/DoubleBB_backtest1.png">
 
 
-4. The idea is further backtested with Backtrader and the result is deeply analyzed by QuantStats `qs.reports.html(strat_return, output=True)`. A report in HTML format is also generated. 
+4. The idea is further backtested with Backtrader and the result is deeply analyzed by QuantStats `qs.reports.html(strat_return, output=True)`. A full report in HTML format is also generated. 
+<img src="https://github.com/phynance/Double_Bollinger_Band_with_Backtest/blob/main/strategytearsheet.png">
 
 
 
